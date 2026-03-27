@@ -14,7 +14,7 @@
   isocodes,
   python3,
   tesseract4,
-  extraOcrEngines ? [ ], # other supported engines are: ocrad gocr cuneiform
+  extraOcrEngines ? [ ], # other supported engines are: ocrad gocr
 }:
 
 stdenv.mkDerivation (finalAttrs: {

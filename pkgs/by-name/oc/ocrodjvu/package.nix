@@ -10,8 +10,6 @@
   libxslt,
   pkg-config,
   tesseract5,
-  withCuneiform ? false,
-  cuneiform,
   withGocr ? false,
   gocr,
   withOcrad ? false,
@@ -36,7 +34,6 @@ python3Packages.buildPythonApplication rec {
 
   propagatedBuildInputs = [
   ]
-  ++ lib.optional withCuneiform cuneiform
   ++ lib.optional withGocr gocr
   ++ lib.optional withOcrad ocrad;
 
