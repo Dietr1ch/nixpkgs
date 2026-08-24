@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "obs-source-switcher";
-  version = "0.4.3";
+  version = "0.4.4";
 
   src = fetchFromGitHub {
     owner = "exeldro";
