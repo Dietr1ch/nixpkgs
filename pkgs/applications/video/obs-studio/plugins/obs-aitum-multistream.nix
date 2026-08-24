@@ -6,6 +6,7 @@
   curl,
   obs-studio,
   qtbase,
+  nix-update-script,
 }:
 
 stdenv.mkDerivation rec {
@@ -21,6 +22,8 @@ stdenv.mkDerivation rec {
 
   # Remove after https://github.com/Aitum/obs-aitum-multistream/pull/15 is released :)
   patches = [ ./obs-aitum-multistream.diff ];
+
+  passthru.updateScript = nix-update-script { };
 
   # Fix FTBFS with Qt >= 6.8
   prePatch = ''
