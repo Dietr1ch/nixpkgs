@@ -11,17 +11,14 @@
 
 stdenv.mkDerivation rec {
   pname = "obs-aitum-multistream";
-  version = "1.0.7";
+  version = "1.0.8";
 
   src = fetchFromGitHub {
     owner = "Aitum";
     repo = "obs-aitum-multistream";
     tag = version;
-    hash = "sha256-TqddyTBRWLyfwYi9I0nQE8Z19YL2RwkZqUwi7F9XpwQ=";
+    hash = "sha256-naf5PubNWK65izmFo638gf4NPRy0uiOyWPj410LNPlY=";
   };
-
-  # Remove after https://github.com/Aitum/obs-aitum-multistream/pull/15 is released :)
-  patches = [ ./obs-aitum-multistream.diff ];
 
   passthru.updateScript = nix-update-script { };
 
