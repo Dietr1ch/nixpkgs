@@ -4,6 +4,7 @@
   fetchFromGitHub,
   cmake,
   obs-studio,
+  nix-update-script,
 }:
 
 stdenv.mkDerivation {
@@ -16,6 +17,8 @@ stdenv.mkDerivation {
     rev = "b229f40faceb0bb39cea41ce0ce2f2f236c0cbd1";
     hash = "sha256-5io2uMvPdHQAWFDqLyXLC6nxTEjkrk8v4v8XwGsPF7U=";
   };
+
+  passthru.updateScript = nix-update-script { };
 
   nativeBuildInputs = [ cmake ];
 
